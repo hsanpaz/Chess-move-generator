@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        pre {outline: 1px solid #bbb; padding: 5px; margin: 5px; background: #eee }
+        .col {
+            column-count: 2;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Legal moves for fen start position.</h1>
+    <h2> Fen : rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -</h2>
+    <div class="col">
+        <pre id="obj">
+        </pre>
+    </div>
+    <script src="dist/movegen.min.js"></script>
+    <script>
+        const initialBoard = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -';// fen start position.
+        var results = moveGenerator.chessMove.getValidMoves(initialBoard, true);// true for fen board
+        document.getElementById('obj').innerHTML = JSON.stringify(results.algebraicMoves,null,2);
+    </script>
+</body>
+</html>

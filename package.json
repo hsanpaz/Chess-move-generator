@@ -1,0 +1,17 @@
+{
+  "name": "chess-move-generator",
+  "version": "1.0.0",
+  "description": "chess move generator",
+  "main": "js/Chess.js",
+  "scripts": {
+    "ug": "uglifyjs dist/movegen.js -c -o dist/movegen.min.js",
+    "br": "browserify src/Chess.js --standalone moveGenerator -o dist/movegen.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "uglify-es": "^3.3.9"
+  }
+}
